@@ -14,122 +14,207 @@
         }
 
         body {
-            background-color: #0d0f17;
+            background-color: #080911;
             color: #e0e6ed;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Top Navigation Bar */
+        /* Modern Glowing Background Orbs */
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        body::before {
+            background: #7289da;
+            top: -50px;
+            left: -50px;
+        }
+
+        body::after {
+            background: #00ffcc;
+            top: 400px;
+            right: -50px;
+        }
+
+        /* Glassmorphism Top Navigation Bar */
         .top-nav {
-            padding: 1.5rem 5%;
-            background-color: #151828;
-            border-bottom: 1px solid #1f2438;
+            padding: 1.2rem 8%;
+            background: rgba(16, 18, 30, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(114, 137, 218, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             color: #7289da;
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.2s, transform 0.2s;
+            transition: all 0.3s ease;
         }
 
         .back-btn:hover {
             color: #00ffcc;
+            text-shadow: 0 0 8px rgba(0, 255, 204, 0.6);
             transform: translateX(-3px);
         }
 
         /* Copy IP Button */
         .copy-ip-btn {
-            background-color: #1a1e30;
+            background-color: rgba(26, 30, 48, 0.8);
             border: 1px solid #7289da;
             color: #00ffcc;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
             font-weight: bold;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(114, 137, 218, 0.2);
         }
 
         .copy-ip-btn:hover {
-            background-color: #7289da;
-            color: #ffffff;
+            background-color: #00ffcc;
+            color: #080911;
+            border-color: #00ffcc;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
         }
 
         /* Header / Hero */
         header {
-            background: linear-gradient(180deg, #151828 0%, #0d0f17 100%);
-            padding: 3rem 1rem 2rem 1rem;
+            padding: 4rem 1rem 2rem 1rem;
             text-align: center;
+            position: relative;
         }
 
         header h1 {
-            font-size: 2.8rem;
-            color: #ffffff;
+            font-size: 3.2rem;
+            font-weight: 800;
             margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #7289da 50%, #00ffcc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            drop-shadow: 0 0 25px rgba(0, 255, 204, 0.3);
         }
 
         header p {
-            color: #94a3b8;
-            font-size: 1.1rem;
+            color: #a0a5c0;
+            font-size: 1.2rem;
         }
 
         /* Container */
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 2rem 1.5rem 4rem 1.5rem;
         }
 
         .section-title {
-            font-size: 1.8rem;
+            font-size: 2rem;
+            font-weight: 800;
             color: #ffffff;
-            margin: 2.5rem 0 1.5rem 0;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #1f2438;
+            margin: 3rem 0 1.8rem 0;
+            padding-bottom: 0.6rem;
+            border-bottom: 2px solid rgba(114, 137, 218, 0.2);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         }
 
-        /* Grid & Cards */
+        /* Grid & Glassmorphism Cards */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            gap: 1.8rem;
         }
 
         .card {
-            background-color: #151828;
-            border: 1px solid #23283e;
-            border-radius: 12px;
-            padding: 1.5rem;
+            background: rgba(16, 19, 35, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 1.8rem;
             position: relative;
-            transition: transform 0.2s, border-color 0.2s;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #7289da, #00ffcc);
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
 
         .card:hover {
-            transform: translateY(-3px);
-            border-color: #7289da;
+            transform: translateY(-5px);
+            border-color: rgba(0, 255, 204, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 204, 0.15);
+        }
+
+        .card:hover::before {
+            opacity: 1;
         }
 
         .role-badge {
             display: inline-block;
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
             font-size: 0.75rem;
-            font-weight: bold;
+            font-weight: 800;
             text-transform: uppercase;
-            margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.9rem;
         }
 
-        /* Role Colors */
-        .role-owner { background-color: #ff4757; color: #fff; }
-        .role-mod { background-color: #2ed573; color: #0d0f17; }
-        .role-mcmod { background-color: #ffa502; color: #0d0f17; }
-        .role-thanks { background-color: #70a1ff; color: #0d0f17; }
+        /* Glowing Role Badges */
+        .role-owner { 
+            background-color: rgba(255, 71, 87, 0.2); 
+            color: #ff4757; 
+            border: 1px solid #ff4757;
+            box-shadow: 0 0 10px rgba(255, 71, 87, 0.3);
+        }
+        .role-mod { 
+            background-color: rgba(46, 213, 115, 0.2); 
+            color: #2ed573; 
+            border: 1px solid #2ed573;
+            box-shadow: 0 0 10px rgba(46, 213, 115, 0.3);
+        }
+        .role-mcmod { 
+            background-color: rgba(255, 165, 2, 0.2); 
+            color: #ffa502; 
+            border: 1px solid #ffa502;
+            box-shadow: 0 0 10px rgba(255, 165, 2, 0.3);
+        }
+        .role-thanks { 
+            background-color: rgba(112, 161, 255, 0.2); 
+            color: #70a1ff; 
+            border: 1px solid #70a1ff;
+            box-shadow: 0 0 10px rgba(112, 161, 255, 0.3);
+        }
 
         .card h3 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: #ffffff;
             margin-bottom: 0.8rem;
         }
@@ -140,8 +225,8 @@
         }
 
         .info-list li {
-            margin-bottom: 0.4rem;
-            color: #94a3b8;
+            margin-bottom: 0.5rem;
+            color: #a0a5c0;
         }
 
         .info-list strong {
@@ -151,19 +236,22 @@
         .info-list a {
             color: #00ffcc;
             text-decoration: none;
+            transition: all 0.2s ease;
         }
 
         .info-list a:hover {
-            text-decoration: underline;
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(0, 255, 204, 0.8);
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 2rem;
-            background-color: #090a10;
-            color: #64748b;
-            border-top: 1px solid #1a1e30;
+            padding: 2.5rem;
+            background: rgba(8, 9, 17, 0.9);
+            color: #667085;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.95rem;
         }
     </style>
 </head>
@@ -171,6 +259,7 @@
 
     <nav class="top-nav">
         <a href="index.html" class="back-btn">&#8592; Back to Home</a>
+        <button class="copy-ip-btn" id="ipBtn" onclick="copyIP()">📋 Copy Server IP</button>
     </nav>
 
     <header>
@@ -230,6 +319,28 @@
     <footer>
         <p>&copy; 2026 NEXUS Studios. All rights reserved.</p>
     </footer>
+
+    <script>
+        function copyIP() {
+            const serverIP = "nexusmp.mcsh.io";
+            navigator.clipboard.writeText(serverIP).then(() => {
+                const btn = document.getElementById("ipBtn");
+                btn.innerText = "✓ IP Copied!";
+                btn.style.backgroundColor = "#00ffcc";
+                btn.style.color = "#080911";
+                btn.style.borderColor = "#00ffcc";
+                btn.style.boxShadow = "0 0 25px rgba(0, 255, 204, 0.8)";
+
+                setTimeout(() => {
+                    btn.innerText = "📋 Copy Server IP";
+                    btn.style.backgroundColor = "rgba(26, 30, 48, 0.8)";
+                    btn.style.color = "#00ffcc";
+                    btn.style.borderColor = "#7289da";
+                    btn.style.boxShadow = "0 0 10px rgba(114, 137, 218, 0.2)";
+                }, 2000);
+            });
+        }
+    </script>
 
 </body>
 </html>
