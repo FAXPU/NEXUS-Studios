@@ -231,24 +231,5 @@
         <p>&copy; 2026 NEXUS Studios. All rights reserved.</p>
     </footer>
 
-    <script>
-        function copyIP() {
-            const serverIP = "play.nexusstudios.net"; // Replace with your actual server IP
-            navigator.clipboard.writeText(serverIP).then(() => {
-                const btn = document.getElementById("ipBtn");
-                btn.innerText = "✓ IP Copied!";
-                btn.style.backgroundColor = "#00ffcc";
-                btn.style.color = "#0d0f17";
-
-                // Reset button text after 2 seconds
-                setTimeout(() => {
-                    btn.innerText = "📋 Copy Server IP";
-                    btn.style.backgroundColor = "#1a1e30";
-                    btn.style.color = "#00ffcc";
-                }, 2000);
-            });
-        }
-    </script>
-
 </body>
 </html>
