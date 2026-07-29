@@ -19,10 +19,32 @@
             line-height: 1.6;
         }
 
+        /* Top Navigation Bar */
+        .top-nav {
+            padding: 1.5rem 5%;
+            background-color: #151828;
+            border-bottom: 1px solid #1f2438;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #7289da;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .back-btn:hover {
+            color: #00ffcc;
+            transform: translateX(-3px);
+        }
+
         /* Header / Hero */
         header {
             background: linear-gradient(180deg, #151828 0%, #0d0f17 100%);
-            padding: 4rem 1rem 3rem 1rem;
+            padding: 3rem 1rem 3rem 1rem;
             text-align: center;
             border-bottom: 1px solid #1f2438;
         }
@@ -177,13 +199,17 @@
 </head>
 <body>
 
+    <nav class="top-nav">
+        <a href="index.html" class="back-btn">&#8592; Back to Home</a>
+    </nav>
+
     <header>
         <span class="badge">Survival Multiplayer</span>
         <h1>NEXUS SMP</h1>
         <p>A player-driven economy, intense combat arenas, and a thriving community of creators and gamers.</p>
         
         <div class="ip-box">
-            <span>Server IP: nexusmp.mcsh.io</span>
+            <span>Server IP: play.nexusstudios.net</span>
         </div>
     </header>
 
