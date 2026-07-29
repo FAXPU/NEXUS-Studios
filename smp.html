@@ -14,16 +14,50 @@
         }
 
         body {
-            background-color: #0d0f17;
+            background-color: #080911;
             color: #e0e6ed;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Top Navigation Bar */
+        /* Modern Glowing Background Orbs */
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        body::before {
+            background: #7289da;
+            top: -50px;
+            left: -50px;
+        }
+
+        body::after {
+            background: #00ffcc;
+            top: 400px;
+            right: -50px;
+        }
+
+        /* Glassmorphism Top Navigation Bar */
         .top-nav {
-            padding: 1.5rem 5%;
-            background-color: #151828;
-            border-bottom: 1px solid #1f2438;
+            padding: 1.2rem 8%;
+            background: rgba(16, 18, 30, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(114, 137, 218, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .back-btn {
@@ -33,62 +67,89 @@
             color: #7289da;
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.2s, transform 0.2s;
+            transition: all 0.3s ease;
         }
 
         .back-btn:hover {
             color: #00ffcc;
+            text-shadow: 0 0 8px rgba(0, 255, 204, 0.6);
             transform: translateX(-3px);
+        }
+
+        .copy-ip-btn {
+            background-color: rgba(26, 30, 48, 0.8);
+            border: 1px solid #7289da;
+            color: #00ffcc;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(114, 137, 218, 0.2);
+        }
+
+        .copy-ip-btn:hover {
+            background-color: #00ffcc;
+            color: #080911;
+            border-color: #00ffcc;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
         }
 
         /* Header / Hero */
         header {
-            background: linear-gradient(180deg, #151828 0%, #0d0f17 100%);
-            padding: 3rem 1rem 3rem 1rem;
+            padding: 4rem 1rem 3rem 1rem;
             text-align: center;
-            border-bottom: 1px solid #1f2438;
+            position: relative;
         }
 
         .badge {
             background-color: #00ffcc;
-            color: #0d0f17;
-            padding: 0.3rem 0.8rem;
+            color: #080911;
+            padding: 0.4rem 1rem;
             border-radius: 20px;
             font-size: 0.85rem;
-            font-weight: 700;
+            font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
         }
 
         header h1 {
-            font-size: 3rem;
-            margin: 1rem 0 0.5rem 0;
-            color: #ffffff;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 1.2rem 0 0.5rem 0;
+            background: linear-gradient(135deg, #ffffff 0%, #7289da 50%, #00ffcc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            drop-shadow: 0 0 25px rgba(0, 255, 204, 0.3);
         }
 
         header p {
-            font-size: 1.2rem;
-            color: #94a3b8;
-            max-width: 600px;
-            margin: 0 auto 2rem auto;
+            font-size: 1.25rem;
+            color: #a0a5c0;
+            max-width: 650px;
+            margin: 0 auto 2.5rem auto;
         }
 
-        /* Server IP Box */
+        /* Glowing Server IP Box */
         .ip-box {
             display: inline-flex;
             align-items: center;
-            background-color: #1a1e30;
-            border: 2px dashed #7289da;
-            padding: 0.8rem 1.5rem;
-            border-radius: 8px;
-            font-size: 1.1rem;
+            background: rgba(22, 25, 43, 0.7);
+            backdrop-filter: blur(8px);
+            border: 2px dashed #00ffcc;
+            padding: 0.9rem 1.8rem;
+            border-radius: 12px;
+            font-size: 1.15rem;
             font-weight: bold;
             color: #00ffcc;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+            text-shadow: 0 0 8px rgba(0, 255, 204, 0.5);
         }
 
         /* Main Container */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 3rem 1.5rem;
         }
@@ -96,9 +157,11 @@
         /* Feature Sections */
         .section-title {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2.5rem;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3.5rem;
             color: #ffffff;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
         }
 
         .grid {
@@ -109,33 +172,55 @@
         }
 
         .card {
-            background-color: #151828;
-            border: 1px solid #23283e;
-            border-radius: 12px;
-            padding: 2rem;
-            transition: transform 0.2s, border-color 0.2s;
+            background: rgba(16, 19, 35, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #7289da, #00ffcc);
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
 
         .card:hover {
-            transform: translateY(-4px);
-            border-color: #7289da;
+            transform: translateY(-7px);
+            border-color: rgba(0, 255, 204, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 204, 0.15);
+        }
+
+        .card:hover::before {
+            opacity: 1;
         }
 
         .card-icon {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 1rem;
         }
 
         .card h3 {
             font-size: 1.5rem;
-            color: #ffffff;
+            color: #00ffcc;
             margin-bottom: 0.8rem;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
         }
 
         .card p {
-            color: #94a3b8;
+            color: #a0a5c0;
             font-size: 0.95rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
         }
 
         .card ul {
@@ -144,7 +229,7 @@
 
         .card ul li {
             color: #cbd5e1;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
             padding-left: 1.2rem;
             position: relative;
         }
@@ -159,28 +244,35 @@
 
         /* Rules Banner */
         .rules-container {
-            background-color: #151828;
+            background: rgba(16, 19, 35, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-left: 4px solid #7289da;
-            padding: 2rem;
-            border-radius: 0 12px 12px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2.5rem;
+            border-radius: 0 16px 16px 0;
             margin-bottom: 4rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .rules-container h3 {
             color: #ffffff;
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            text-shadow: 0 0 10px rgba(114, 137, 218, 0.4);
         }
 
         .rules-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1rem;
+            gap: 1.2rem;
             list-style: none;
         }
 
         .rules-list li {
-            color: #94a3b8;
+            color: #a0a5c0;
         }
 
         .rules-list strong {
@@ -190,10 +282,11 @@
         /* Footer */
         footer {
             text-align: center;
-            padding: 2rem;
-            background-color: #090a10;
-            color: #64748b;
-            border-top: 1px solid #1a1e30;
+            padding: 2.5rem;
+            background: rgba(8, 9, 17, 0.9);
+            color: #667085;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.95rem;
         }
     </style>
 </head>
@@ -271,18 +364,21 @@
 
     <script>
         function copyIP() {
-            const serverIP = "nexusmp.mcsh.io"; // Replace with your actual server IP
+            const serverIP = "nexusmp.mcsh.io";
             navigator.clipboard.writeText(serverIP).then(() => {
                 const btn = document.getElementById("ipBtn");
                 btn.innerText = "✓ IP Copied!";
                 btn.style.backgroundColor = "#00ffcc";
-                btn.style.color = "#0d0f17";
+                btn.style.color = "#080911";
+                btn.style.borderColor = "#00ffcc";
+                btn.style.boxShadow = "0 0 25px rgba(0, 255, 204, 0.8)";
 
-                // Reset button text after 2 seconds
                 setTimeout(() => {
                     btn.innerText = "📋 Copy Server IP";
-                    btn.style.backgroundColor = "#1a1e30";
+                    btn.style.backgroundColor = "rgba(26, 30, 48, 0.8)";
                     btn.style.color = "#00ffcc";
+                    btn.style.borderColor = "#7289da";
+                    btn.style.boxShadow = "0 0 10px rgba(114, 137, 218, 0.2)";
                 }, 2000);
             });
         }
