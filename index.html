@@ -14,30 +14,63 @@
         }
 
         body {
-            background-color: #0f111a;
+            background-color: #080911;
             color: #ffffff;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Navigation */
+        /* Modern Glowing Background Orbs */
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        body::before {
+            background: #7289da;
+            top: -50px;
+            left: -50px;
+        }
+
+        body::after {
+            background: #00ffcc;
+            top: 300px;
+            right: -50px;
+        }
+
+        /* Glassmorphism Navigation */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 5%;
-            background-color: #16192b;
-            border-bottom: 1px solid #2a2e45;
+            padding: 1.2rem 8%;
+            background: rgba(16, 18, 30, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(114, 137, 218, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: 800;
-            color: #7289da;
+            color: #ffffff;
             letter-spacing: 1px;
+            text-shadow: 0 0 12px rgba(114, 137, 218, 0.6);
         }
 
         .logo span {
             color: #00ffcc;
+            text-shadow: 0 0 12px rgba(0, 255, 204, 0.8);
         }
 
         .nav-links {
@@ -48,14 +81,15 @@
         }
 
         .nav-links a {
-            color: #cccccc;
+            color: #a0a5c0;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
 
         .nav-links a:hover {
             color: #00ffcc;
+            text-shadow: 0 0 8px rgba(0, 255, 204, 0.6);
         }
 
         /* Hero Section */
@@ -65,122 +99,162 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 6rem 1rem;
-            background: linear-gradient(180deg, #16192b 0%, #0f111a 100%);
+            padding: 8rem 1rem 6rem 1rem;
+            position: relative;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(90deg, #7289da, #00ffcc);
+            font-size: 3.8rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(135deg, #ffffff 0%, #7289da 50%, #00ffcc 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            drop-shadow: 0 0 25px rgba(0, 255, 204, 0.3);
         }
 
         .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
+            font-size: 1.25rem;
+            max-width: 650px;
             color: #a0a5c0;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
 
+        /* Glowing Buttons */
         .btn-container {
             display: flex;
-            gap: 1rem;
+            gap: 1.2rem;
             flex-wrap: wrap;
             justify-content: center;
         }
 
         .btn {
-            padding: 0.8rem 1.8rem;
-            border-radius: 8px;
+            padding: 0.9rem 2rem;
+            border-radius: 10px;
             text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.2s, background-color 0.3s;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
         .btn-primary {
             background-color: #7289da;
             color: #ffffff;
+            box-shadow: 0 0 15px rgba(114, 137, 218, 0.4);
         }
 
         .btn-primary:hover {
-            background-color: #5b6eae;
+            background-color: #8297e6;
+            box-shadow: 0 0 25px rgba(114, 137, 218, 0.8);
+            transform: translateY(-3px);
         }
 
         .btn-secondary {
             background-color: #00ffcc;
-            color: #0f111a;
+            color: #080911;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
         }
 
         .btn-secondary:hover {
-            background-color: #00cca3;
+            background-color: #33ffd6;
+            box-shadow: 0 0 25px rgba(0, 255, 204, 0.8);
+            transform: translateY(-3px);
         }
 
         .btn-outline {
-            border: 1px solid #7289da;
+            background: rgba(16, 18, 30, 0.4);
+            border: 1px solid rgba(114, 137, 218, 0.6);
             color: #7289da;
+            backdrop-filter: blur(5px);
         }
 
         .btn-outline:hover {
-            background-color: #7289da;
+            background: rgba(114, 137, 218, 0.2);
+            border-color: #7289da;
             color: #ffffff;
+            box-shadow: 0 0 20px rgba(114, 137, 218, 0.5);
+            transform: translateY(-3px);
         }
 
-        /* Features Section */
+        /* Modern Features Cards */
         .features {
-            padding: 4rem 5%;
-            max-width: 1200px;
+            padding: 5rem 8%;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
         .features h2 {
             text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3.5rem;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
         .card {
-            background-color: #16192b;
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid #2a2e45;
-            transition: border-color 0.3s;
+            background: rgba(16, 19, 35, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #7289da, #00ffcc);
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
 
         .card:hover {
-            border-color: #7289da;
+            transform: translateY(-7px);
+            border-color: rgba(0, 255, 204, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 204, 0.15);
+        }
+
+        .card:hover::before {
+            opacity: 1;
         }
 
         .card h3 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: #00ffcc;
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
         }
 
         .card p {
             color: #a0a5c0;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 2rem;
-            background-color: #0b0c12;
-            color: #666;
-            border-top: 1px solid #1a1d2e;
-            margin-top: 4rem;
+            padding: 2.5rem;
+            background: rgba(8, 9, 17, 0.9);
+            color: #667085;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 5rem;
+            font-size: 0.95rem;
         }
     </style>
 </head>
@@ -200,7 +274,7 @@
         <h1>Where Creators & Gamers Connect</h1>
         <p>Join the NEXUS Studios community to collaborate, build on our dedicated SMP server, and grow alongside fellow streamers and gamers.</p>
         <div class="btn-container">
-            <a href="https://discord.gg/kheBevzwd" class="btn btn-primary">Join Discord</a>
+            <a href="https://discord.gg/kheBevzwd" target="_blank" class="btn btn-primary">Join Discord</a>
             <a href="smp.html" class="btn btn-secondary">Join the SMP</a>
             <a href="staff.html" class="btn btn-outline">Meet the Staff</a>
         </div>
