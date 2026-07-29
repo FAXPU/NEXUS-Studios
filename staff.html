@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS Studios | Staff & Credits</title>
+    <style>
+        /* Base Reset & Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d0f17;
+            color: #e0e6ed;
+            line-height: 1.6;
+        }
+
+        /* Top Navigation Bar */
+        .top-nav {
+            padding: 1.5rem 5%;
+            background-color: #151828;
+            border-bottom: 1px solid #1f2438;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-btn {
+            color: #7289da;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .back-btn:hover {
+            color: #00ffcc;
+            transform: translateX(-3px);
+        }
+
+        /* Copy IP Button */
+        .copy-ip-btn {
+            background-color: #1a1e30;
+            border: 1px solid #7289da;
+            color: #00ffcc;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-ip-btn:hover {
+            background-color: #7289da;
+            color: #ffffff;
+        }
+
+        /* Header / Hero */
+        header {
+            background: linear-gradient(180deg, #151828 0%, #0d0f17 100%);
+            padding: 3rem 1rem 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin: 2.5rem 0 1.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #1f2438;
+        }
+
+        /* Grid & Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: #151828;
+            border: 1px solid #23283e;
+            border-radius: 12px;
+            padding: 1.5rem;
+            position: relative;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: #7289da;
+        }
+
+        .role-badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Role Colors */
+        .role-owner { background-color: #ff4757; color: #fff; }
+        .role-mod { background-color: #2ed573; color: #0d0f17; }
+        .role-mcmod { background-color: #ffa502; color: #0d0f17; }
+        .role-thanks { background-color: #70a1ff; color: #0d0f17; }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 0.8rem;
+        }
+
+        .info-list {
+            list-style: none;
+            font-size: 0.95rem;
+        }
+
+        .info-list li {
+            margin-bottom: 0.4rem;
+            color: #94a3b8;
+        }
+
+        .info-list strong {
+            color: #cbd5e1;
+        }
+
+        .info-list a {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+
+        .info-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #090a10;
+            color: #64748b;
+            border-top: 1px solid #1a1e30;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="top-nav">
+        <a href="index.html" class="back-btn">&#8592; Back to Home</a>
+    </nav>
+
+    <header>
+        <h1>Meet the Team</h1>
+        <p>The owners, moderators, and contributors behind NEXUS Studios.</p>
+    </header>
+
+    <div class="container">
+
+        <h2 class="section-title">Staff Members</h2>
+        <div class="grid">
+
+            <div class="card">
+                <span class="role-badge role-owner">Owner</span>
+                <h3>FAXPU</h3>
+                <ul class="info-list">
+                    <li><strong>Discord:</strong> faxpu</li>
+                    <li><strong>YouTube:</strong> <a href="https://www.youtube.com/@FAXPU12" target="_blank">FAXPU Reviews</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <span class="role-badge role-mod">Moderator</span>
+                <h3>PINGONATE</h3>
+                <ul class="info-list">
+                    <li><strong>Discord:</strong> pienguinsfinalboss</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <span class="role-badge role-mcmod">MC Moderator</span>
+                <h3>Voiduc2</h3>
+                <ul class="info-list">
+                    <li><strong>Discord:</strong> tarekblr</li>
+                    <li><strong>YouTube:</strong> <a href="https://www.youtube.com/@Voiduc2" target="_blank">@Voiduc2</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <h2 class="section-title">Special Thanks</h2>
+        <div class="grid">
+
+            <div class="card">
+                <span class="role-badge role-thanks">Contributor</span>
+                <h3>Magma_Knight</h3>
+                <ul class="info-list">
+                    <li><strong>Discord:</strong> tokito03832</li>
+                    <li><strong>YouTube:</strong> <a href="https://www.youtube.com/@magmaknightmk7" target="_blank">@magmaknightmk7</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 NEXUS Studios. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function copyIP() {
+            const serverIP = "play.nexusstudios.net"; // Replace with your actual server IP
+            navigator.clipboard.writeText(serverIP).then(() => {
+                const btn = document.getElementById("ipBtn");
+                btn.innerText = "✓ IP Copied!";
+                btn.style.backgroundColor = "#00ffcc";
+                btn.style.color = "#0d0f17";
+
+                // Reset button text after 2 seconds
+                setTimeout(() => {
+                    btn.innerText = "📋 Copy Server IP";
+                    btn.style.backgroundColor = "#1a1e30";
+                    btn.style.color = "#00ffcc";
+                }, 2000);
+            });
+        }
+    </script>
+
+</body>
+</html>
