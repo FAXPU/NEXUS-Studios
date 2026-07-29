@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS SMP | Server Info & Features</title>
+    <style>
+        /* Base Reset & Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d0f17;
+            color: #e0e6ed;
+            line-height: 1.6;
+        }
+
+        /* Header / Hero */
+        header {
+            background: linear-gradient(180deg, #151828 0%, #0d0f17 100%);
+            padding: 4rem 1rem 3rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid #1f2438;
+        }
+
+        .badge {
+            background-color: #00ffcc;
+            color: #0d0f17;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 1rem 0 0.5rem 0;
+            color: #ffffff;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        /* Server IP Box */
+        .ip-box {
+            display: inline-flex;
+            align-items: center;
+            background-color: #1a1e30;
+            border: 2px dashed #7289da;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* Feature Sections */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            color: #ffffff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background-color: #151828;
+            border: 1px solid #23283e;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: #7289da;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 0.8rem;
+        }
+
+        .card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card ul li {
+            color: #cbd5e1;
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .card ul li::before {
+            content: "•";
+            color: #00ffcc;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Rules Banner */
+        .rules-container {
+            background-color: #151828;
+            border-left: 4px solid #7289da;
+            padding: 2rem;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 4rem;
+        }
+
+        .rules-container h3 {
+            color: #ffffff;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .rules-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            list-style: none;
+        }
+
+        .rules-list li {
+            color: #94a3b8;
+        }
+
+        .rules-list strong {
+            color: #ffffff;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #090a10;
+            color: #64748b;
+            border-top: 1px solid #1a1e30;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="badge">Survival Multiplayer</span>
+        <h1>NEXUS SMP</h1>
+        <p>A player-driven economy, intense combat arenas, and a thriving community of creators and gamers.</p>
+        
+        <div class="ip-box">
+            <span>Server IP: nexusmp.mcsh.io</span>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <h2 class="section-title">Core Features</h2>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">💎</div>
+                <h3>Player Economy</h3>
+                <p>Trade, build wealth, and create shop districts. Our balanced economy lets you monetize your builds and resources.</p>
+                <ul>
+                    <li><strong>Player Shops:</strong> Open your own store anywhere in the marketplace.</li>
+                    <li><strong>Auction House:</strong> Sell rare items to the highest bidder globally.</li>
+                    <li><strong>Jobs & Quests:</strong> Earn currency by mining, farming, or completing bounties.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⚔️</div>
+                <h3>Combat & Fights</h3>
+                <p>Test your skills in designated battle grounds or organize faction clashes across the world.</p>
+                <ul>
+                    <li><strong>PvP Arenas:</strong> Battle in high-stakes arena events with leaderboards.</li>
+                    <li><strong>Bounty System:</strong> Place or claim bounties on rivals in open-world combat zones.</li>
+                    <li><strong>Custom Events:</strong> Take part in scheduled weekend tournament events.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎥</div>
+                <h3>Creator Friendly</h3>
+                <p>Built from the ground up to support streamers, YouTubers, and storytellers.</p>
+                <ul>
+                    <li><strong>Replay Access:</strong> Tools available for smooth cinematic recording.</li>
+                    <li><strong>Content Role:</strong> Special perks and highlights for active creators.</li>
+                    <li><strong>Collab Zones:</strong> Dedicated areas designed for community mega-projects.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rules-container">
+            <h3>Server Quick Rules</h3>
+            <ul class="rules-list">
+                <li><strong>1. Respect Players:</strong> Maintain sportsmanlike conduct during fights.</li>
+                <li><strong>2. Safe Trading:</strong> Use designated shop areas to prevent trade scams.</li>
+                <li><strong>3. Fair Play:</strong> Unapproved mods, hacks, or exploits are strictly prohibited.</li>
+                <li><strong>4. Content Creator Friendly:</strong> Respect recording/streaming sessions in progress.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 NEXUS Studios. Join our Discord to get whitelisted!</p>
+    </footer>
+
+</body>
+</html>
